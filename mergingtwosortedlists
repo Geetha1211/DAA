@@ -10,7 +10,7 @@ node* create(node *head)
 {
 node *new,*prev;
 int x;
-printf("enter data");
+printf("enter data in ascending order,enter -1 to end");
 scanf("%d",&x);
 while(x!=-1)
 {
@@ -27,7 +27,7 @@ else
 prev->next=new;
 prev=new;
 }
-printf("enter data");
+printf("enter data in ascending order,enter -1 to end");
 scanf("%d",&x);
 }
 return head;
