@@ -54,9 +54,9 @@ void main()
 {
 int m,n;
 //int nums1[m+n],nums2[n];
-printf("enter number of elements in nums1");
+printf("enter number of elements in nums1:");
 scanf("%d",&m);
-printf("enter number of elements in nums2");
+printf("enter number of elements in nums2:");
 scanf("%d",&n);
 int nums1[m+n],nums2[n];
 printf("enter elements in nums1 in sorted order");
@@ -77,3 +77,14 @@ printf("%d,",nums1[i]);
 }
 printf("]");
 }
+
+output:
+enter number of elements in nums1:3
+enter number of elements in nums2:3
+enter elements in nums1 in sorted order1
+2
+3
+enter elements in nums2 in sorted order2
+5
+6
+[1,2,2,3,5,6,]
