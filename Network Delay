@@ -108,3 +108,27 @@ void main()
     int r=networkDelayTime(times,timesSize,&timesColSize,n,k);
     printf("network delay :%d",r);
 }
+
+output1:
+enter number of vertices4
+enter timesSize3
+2
+1
+1
+2
+3
+1
+3
+4
+1
+enter starting edge2
+network delay :2
+
+output2:
+enter number of vertices2
+enter timesSize1
+1
+2
+1
+enter starting edge2
+network delay :-1
