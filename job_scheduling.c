@@ -89,3 +89,24 @@ scanf("%d",&profit[i]);
 int max_profit=jobScheduling(startTime,startTimeSize,endTime,endTimeSize,profit,profitSize);
 printf("Maximum profit: %d",max_profit);
 }
+
+output:
+enter startTimeSize4
+enter starting times 
+1
+2
+3
+4
+enter endTimeSize4
+enter ending times
+3
+4
+5
+6
+enter profitSize4
+enter profits
+50
+10
+40
+70
+Maximum profit: 120
