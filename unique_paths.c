@@ -28,3 +28,8 @@ scanf("%d",&n);
 int r=uniquePaths(m,n);
 printf("Number of Unique Paths: %d",r);
 }
+
+output:
+enter number of rows in grid3
+enter number of columns in grid7
+Number of Unique Paths: 28
