@@ -53,3 +53,8 @@ scanf("%[^\n]",s);
 char *r=reverseWords(s);
 printf("After reversing words Resulting string is:\n%s",r);
 }
+
+output:
+Enter String  hello world
+After reversing words Resulting string is:
+world hello
