@@ -82,3 +82,11 @@ scanf("%d",&amount);
 int r=coinChange(coins,coinsSize,amount);
 printf("Minimum number of coins required: %d",r);
 }
+
+output:
+enter number of different coins3
+enter denominations1
+2
+5
+enter amount11
+Minimum number of coins required: 3
