@@ -43,8 +43,12 @@ int lengthOfLongestSubstring(char * s){
 void main()
 {
 char *s;
-printf("Enter String");
+printf("Enter String:");
 scanf("%[^\n]",s);
 int r=lengthOfLongestSubstring(s);
 printf("Maximum Length of Substring :%d",r);
 } 
+
+Output:
+Enter String:abcabcbb
+Maximum Length of Substring :3
