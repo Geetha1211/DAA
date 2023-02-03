@@ -1,0 +1,60 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+char * longestCommonPrefix(char ** strs, int strsSize){
+    char *s=malloc(1000*sizeof(char));
+    int min=strlen(strs[0]),r=0;
+    if(strsSize!=1)
+    {
+    for(int i=0;i<min;i++)
+    {
+        if(strs[0][i]==strs[1][i])
+        {
+            r++;
+        }
+        else
+        {
+            break;
+        }
+    }
+    for(int i=2;i<strsSize;i++)
+    {
+        for(int j=0;j<r;j++)
+        {
+            if(strs[0][j]==strs[i][j])
+            {
+                continue;
+            }
+            else
+            {
+                r=j;
+                break;
+            }
+        }
+    }
+    for(int i=0;i<r;i++)
+    {
+        s[i]=strs[0][i];
+    }
+    s[r]='\0';
+    }
+    if(strsSize==1)
+    {
+        s=strs[0];
+    }
+    return s;
+}
+void main()
+{
+int strsSize;
+printf("Enter number of Strings");
+scanf("%d",&strsSize);
+char ** strs=malloc(strsSize*sizeof(char*));
+for(int i=0;i<strsSize;i++)
+{
+strs[i]=malloc(50*sizeof(char));
+scanf("%s",strs[i]);
+}
+char * r=longestCommonPrefix(strs,strsSize);
+printf("Longest Common Prefix :%s",r);
+}
