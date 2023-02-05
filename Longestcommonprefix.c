@@ -4,11 +4,23 @@
 char * longestCommonPrefix(char ** strs, int strsSize){
     char *s=malloc(1000*sizeof(char));
     int min=strlen(strs[0]);
+    int r=0;
     if(strsSize!=1)
     {
-    for(int i=1;i<strsSize;i++)
+    for(int i=0;i<min;i++)
     {
-        for(int j=0;j<min;j++)
+        if(strs[0][i]==strs[1][i])
+        {
+            r++;
+        }
+        else
+        {
+            break;
+        }
+    }
+    for(int i=2;i<strsSize;i++)
+    {
+        for(int j=0;j<r;j++)
         {
             if(strs[0][j]==strs[i][j])
             {
@@ -16,16 +28,16 @@ char * longestCommonPrefix(char ** strs, int strsSize){
             }
             else
             {
-                min=j;
+                r=j;
                 break;
             }
         }
     }
-    for(int i=0;i<min;i++)
+    for(int i=0;i<r;i++)
     {
         s[i]=strs[0][i];
     }
-    s[min]='\0';
+    s[r]='\0';
     }
     if(strsSize==1)
     {
