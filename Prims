@@ -1,0 +1,31 @@
+from os import *
+from sys import *
+from collections import *
+from math import *
+def priority_queue(queue):
+    for i in range(len(queue)-1):
+        for j in range(len(queue)-i-1):
+            if queue[j][2]>queue[j+1][2]:
+                queue[j][0],queue[j+1][0]=queue[j+1][0],queue[j][0]
+                queue[j][1],queue[j+1][1]=queue[j+1][1],queue[j][1]
+                queue[j][2],queue[j+1][2]=queue[j+1][2],queue[j][2]
+    return queue
+
+def calculatePrimsMST(n, m, g):
+    # Write your code here.
+    # Return a 2-D list.
+    sum=0
+    queue=[[1,1,-1]] 
+    visited=[]
+    r=[]
+    while len(visited)!=n:
+        l=queue.pop(0)
+        r.append(l)
+        for i in range(len(g)):
+            if l[1]==g[i][0] and g[i][1] not in visited:
+                queue.append(g[i])
+        queue=priority_queue(queue)
+        visited.append(l[1])
+        #print(queue)     
+    r.pop(0)
+    return r
